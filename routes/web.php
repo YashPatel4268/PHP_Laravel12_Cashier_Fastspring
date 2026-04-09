@@ -58,4 +58,8 @@ Route::middleware("auth")->group(function () {
 
     Route::post('subscription', [PlanController::class, 'subscription'])
         ->name('subscription.create');
+
+       // ✅ NEW: Cancel subscription
+    Route::post('subscription/cancel', [PlanController::class, 'cancel'])
+        ->name('subscription.cancel');       
 });
